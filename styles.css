@@ -15,6 +15,7 @@ body {
 .container {
     display: flex;
     flex: 1;
+    flex-wrap: nowrap; /* Prevent wrapping inside the container */
 }
 
 .left-section, .right-section {
@@ -49,12 +50,14 @@ body {
 .social-icons {
     display: flex;
     gap: 20px;
+    align-items: center; /* Aligns icons centrally */
 }
 
 .social-icons img {
     width: 40px;
     height: 40px;
-    object-fit: contain; /* Ensures the image is contained within the 40px box */
+    object-fit: cover; /* Ensures the image fits without stretching */
+    display: block; /* Ensures no extra space around the image */
 }
 
 .right-section {
