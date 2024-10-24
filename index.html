@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Hourigan</title>
+    <title>Justin Hourigan | Principal Cloud Architect</title>
     <style>
         * {
     margin: 0;
@@ -22,7 +22,8 @@ body {
 .container {
     display: flex;
     flex: 1;
-    flex-wrap: nowrap; /* Prevent wrapping inside the container */
+    flex-wrap: nowrap;
+    height: 100%;
 }
 
 .left-section, .right-section {
@@ -57,14 +58,14 @@ body {
 .social-icons {
     display: flex;
     gap: 20px;
-    align-items: center; /* Aligns icons centrally */
+    align-items: center;
 }
 
 .social-icons img {
     width: 40px;
     height: 40px;
-    object-fit: cover; /* Ensures the image fits without stretching */
-    display: block; /* Ensures no extra space around the image */
+    object-fit: cover;
+    display: block;
 }
 
 .right-section {
@@ -78,6 +79,7 @@ body {
     height: auto;
 }
 
+/* Footer styles */
 footer {
     text-align: center;
     padding: 10px 0;
@@ -85,6 +87,46 @@ footer {
     font-size: 0.8rem;
     color: #888;
     width: 100%;
+}
+
+/* Responsive Design for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the sections vertically */
+        height: auto; /* Adjust height to fit the content */
+    }
+
+    .left-section, .right-section {
+        width: 100%; /* Full width for each section on mobile */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .left-section h1 {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+    }
+
+    .left-section h2 {
+        font-size: 1.5rem; /* Adjust job title size */
+    }
+
+    .left-section p {
+        font-size: 1rem; /* Smaller paragraph text */
+        margin-bottom: 20px; /* Adjust margin */
+    }
+
+    .social-icons img {
+        width: 30px; /* Slightly smaller icons for mobile */
+        height: 30px;
+    }
+
+    .right-section img {
+        width: 80%; /* Scale down profile image on mobile */
+        height: auto;
+    }
+
+    footer {
+        font-size: 0.7rem; /* Smaller footer text on mobile */
+    }
 }
     </style>
 </head>
