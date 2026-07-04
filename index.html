@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Hourigan | Principal Cloud Architect</title>
-    <meta name="description" content="Justin Hourigan — Cloud Architect and Home Lab Hobbyist. From '90s broadcast graphics to video streaming to cloud infrastructure.">
-    <meta name="theme-color" content="#070b12">
-    <meta property="og:title" content="Justin Hourigan | Principal Cloud Architect">
-    <meta property="og:description" content="Cloud Architect and Home Lab Hobbyist. From '90s broadcast graphics to video streaming to cloud infrastructure.">
+    <title>Justin Hourigan · ON AIR</title>
+    <meta name="description" content="Justin Hourigan — cloud architect, home lab operator, broadcast veteran. Now transmitting from the cloud. Do not adjust your set.">
+    <meta name="theme-color" content="#050505">
+    <meta property="og:title" content="Justin Hourigan · ON AIR">
+    <meta property="og:description" content="Now broadcasting from the cloud. Do not adjust your set.">
     <meta property="og:image" content="https://hourigan.ie/profile.png">
     <meta property="og:url" content="https://hourigan.ie">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -16,231 +16,219 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="backdrop" aria-hidden="true">
-        <div class="aurora aurora-a"></div>
-        <div class="aurora aurora-b"></div>
-        <div class="grid-overlay"></div>
-        <div class="spotlight" id="spotlight"></div>
+<body data-channel="3">
+
+    <canvas id="noise" aria-hidden="true"></canvas>
+    <div class="crt" aria-hidden="true">
+        <div class="scanlines"></div>
+        <div class="scanband"></div>
+        <div class="vignette"></div>
     </div>
 
-    <main>
-        <!-- ============ HERO ============ -->
-        <section class="hero">
-            <div class="hero-copy reveal">
-                <p class="eyebrow"><span class="pulse-dot"></span>homelab status: all systems nominal</p>
-                <h1 class="name">Justin<br>Hourigan</h1>
-                <p class="role">
-                    <span class="role-item">Cloud Architect</span>
-                    <span class="role-item"><span class="sep">·</span> Home Lab Hobbyist</span>
-                    <span class="role-item"><span class="sep">·</span> Recovering Broadcast Designer</span>
-                </p>
-                <p class="lede">Three decades of moving pictures across wires — from flashy
-                   TV transitions, through the great buffering years, to cloud
-                   infrastructure that keeps things running smoother than a cat meme
-                   on fiber internet.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary" href="https://www.linkedin.com/in/hourigan/" target="_blank" rel="noopener">Connect on LinkedIn</a>
-                    <a class="btn btn-ghost" href="#story">Read the story <span class="arrow">↓</span></a>
-                </div>
-            </div>
-            <div class="hero-portrait reveal">
-                <div class="portrait-ring">
-                    <div class="portrait-frame">
-                        <img src="profile.png" alt="Cartoon portrait of Justin Hourigan">
-                    </div>
-                </div>
-                <div class="float-chip chip-a"><span class="chip-icon">📺</span>&rsquo;90s Broadcast</div>
-                <div class="float-chip chip-b"><span class="chip-icon">▶&#xFE0F;</span>Video Streaming</div>
-                <div class="float-chip chip-c"><span class="chip-icon">☁&#xFE0F;</span>Cloud Infrastructure</div>
-            </div>
-        </section>
+    <main class="screen">
 
-        <!-- ============ TERMINAL ============ -->
-        <section class="terminal-section reveal" id="story">
-            <div class="terminal" id="terminal">
-                <div class="terminal-bar">
-                    <span class="tdot tdot-r"></span><span class="tdot tdot-y"></span><span class="tdot tdot-g"></span>
-                    <span class="terminal-title">justin@homelab: ~</span>
-                </div>
-                <div class="terminal-body" id="terminal-body" aria-label="Terminal-style career summary">
+        <header class="osd-top">
+            <div class="on-air"><span class="rec-dot"></span>ON AIR</div>
+            <div class="ident">HOURIGAN.IE &middot; TRANSMISSION IDENT</div>
+            <div class="osd-right">
+                <span class="ch-osd" id="ch-osd">CH 03</span>
+                <span class="timecode" id="timecode">00:00:00:00</span>
+            </div>
+        </header>
+
+        <section class="stage">
+            <div class="stage-copy">
+                <p class="standby">&#9642; PLEASE STAND BY &#9642;</p>
+                <h1 class="name">
+                    <span class="glitch" data-text="JUSTIN">JUSTIN</span>
+                    <span class="glitch" data-text="HOURIGAN">HOURIGAN</span>
+                </h1>
+                <p class="tagline">NOW BROADCASTING FROM THE CLOUD</p>
+
+                <div class="channel-panel" id="channel-panel" aria-live="polite">
+                    <!-- populated by script; noscript fallback below -->
                     <noscript>
-                        <p>$ whoami — justin.hourigan</p>
-                        <p>$ cat career.log — 1990s: TV graphics &amp; animation · 2000s: video streaming · now: cloud architecture</p>
-                        <p>$ uptime — 30+ years in moving pictures, still shipping</p>
+                        <h2>CH 01 — BROADCAST</h2>
+                        <p>Television graphics and animation, 1990s issue. Flashy transitions, hot phosphor — motion graphics that made dial-up modems sweat.</p>
+                        <h2>CH 02 — STREAMING</h2>
+                        <p>Then the internet came knocking. Video over the wild early web, when buffering was a rite of passage.</p>
+                        <h2>CH 03 — CLOUD</h2>
+                        <p>Tonight's programme: cloud architecture. Invisible machines moving pictures at planet scale. After hours, the home lab hums.</p>
                     </noscript>
                 </div>
+
+                <div class="remote" role="group" aria-label="Change channel">
+                    <button class="ch-btn" id="ch-down" aria-label="Previous channel">CH &#9660;</button>
+                    <div class="ch-pips">
+                        <button class="pip-btn" data-ch="1">01</button>
+                        <button class="pip-btn" data-ch="2">02</button>
+                        <button class="pip-btn" data-ch="3">03</button>
+                    </div>
+                    <button class="ch-btn" id="ch-up" aria-label="Next channel">CH &#9650;</button>
+                </div>
             </div>
+
+            <aside class="pip">
+                <div class="pip-frame">
+                    <img src="profile.png" alt="Cartoon portrait of Justin Hourigan">
+                    <div class="pip-static"></div>
+                    <span class="pip-live">&#9679; LIVE</span>
+                </div>
+                <p class="pip-caption">FIG. 1 — THE PRESENTER &middot; PORTRAIT RENDERED BY AI</p>
+            </aside>
         </section>
 
-        <!-- ============ THREE ACTS ============ -->
-        <section class="acts">
-            <div class="section-head reveal">
-                <p class="kicker">The career, in three acts</p>
-                <h2>One wild, pixelated ride</h2>
-            </div>
-            <div class="act-grid">
-                <article class="act-card reveal">
-                    <div class="act-num" data-era="the &rsquo;90s">01</div>
-                    <h3>Broadcast</h3>
-                    <p>Kicked off in television as a graphic designer and animator —
-                       think flashy transitions and graphics that would make your
-                       dial-up modem sweat.</p>
-                    <div class="act-tags"><span>Graphic Design</span><span>Animation</span><span>Television</span></div>
-                </article>
-                <article class="act-card reveal">
-                    <div class="act-num" data-era="the wild web">02</div>
-                    <h3>Streaming</h3>
-                    <p>The internet came knocking, and the call of the wild web won.
-                       Moved into IT and video streaming — back when buffering was
-                       basically a rite of passage.</p>
-                    <div class="act-tags"><span>Video Streaming</span><span>IT</span><span>The Wild Web</span></div>
-                </article>
-                <article class="act-card reveal">
-                    <div class="act-num" data-era="now">03</div>
-                    <h3>Cloud</h3>
-                    <p>Fully leveled up to cloud architect — designing cloud
-                       infrastructure that keeps things running smoother than a cat
-                       meme on fiber internet.</p>
-                    <div class="act-tags"><span>Cloud Architecture</span><span>Infrastructure</span><span>Home Lab</span></div>
-                </article>
-            </div>
-        </section>
+        <div class="bars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
 
-        <!-- ============ CONNECT ============ -->
-        <section class="connect">
-            <div class="section-head reveal">
-                <p class="kicker">Say hello</p>
-                <h2>Find me on the wild web</h2>
-            </div>
-            <div class="link-grid">
-                <a class="link-card reveal" href="https://x.com/justhour" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    <div><strong>X / Twitter</strong><span>@justhour</span></div>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a class="link-card reveal" href="https://www.linkedin.com/in/hourigan/" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12M7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0"/></svg>
-                    <div><strong>LinkedIn</strong><span>in/hourigan</span></div>
-                    <span class="link-arrow">→</span>
-                </a>
-                <a class="link-card reveal" href="https://www.imdb.com/name/nm2583439/" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.4 0H1.6C.72 0 0 .72 0 1.6v20.8C0 23.28.72 24 1.6 24h20.8c.88 0 1.6-.72 1.6-1.6V1.6C24 .72 23.28 0 22.4 0M4.8 15.6H2.9V8.4h1.9zm6.97 0h-1.66v-4.86l-.67 4.86h-1.2l-.7-4.75v4.75H5.86V8.4h2.47c.19 1.11.35 2.25.5 3.37l.44-3.37h2.5zm5-1.98c0 .88-.14 1.98-2.03 1.98h-2.4V8.4h1.79c1.02 0 2.64-.09 2.64 1.9zm5.03.62c0 .88-.14 1.74-1.28 1.74-.52 0-.88-.17-1.21-.55l-.11.45h-1.72V8.4h1.83v2.34c.35-.36.69-.51 1.21-.51 1.23 0 1.28.72 1.28 1.61zm-6.85-3.42v3.32c.7.02.6-.48.6-.9v-1.66c0-.31.06-.78-.6-.76m4.66 1.55c-.35 0-.28.5-.28.71v1.83c0 .04.08.13.22.13.45 0 .36-.5.36-.79v-1.17c0-.3.06-.71-.3-.71"/></svg>
-                    <div><strong>IMDb</strong><span>the broadcast years</span></div>
-                    <span class="link-arrow">→</span>
-                </a>
-            </div>
-        </section>
+        <footer class="teletext">
+            <nav class="tt-links" aria-label="Social links">
+                <a href="https://x.com/justhour" target="_blank" rel="noopener"><b class="tt-p tt-red">P101</b> X &middot; @JUSTHOUR</a>
+                <a href="https://www.linkedin.com/in/hourigan/" target="_blank" rel="noopener"><b class="tt-p tt-grn">P102</b> LINKEDIN &middot; /IN/HOURIGAN</a>
+                <a href="https://www.imdb.com/name/nm2583439/" target="_blank" rel="noopener"><b class="tt-p tt-yel">P103</b> IMDB &middot; NM2583439</a>
+            </nav>
+            <p class="tt-line">DO NOT ADJUST YOUR SET — ALL OF THIS WAS DESIGNED AND WRITTEN BY AI</p>
+            <p class="tt-meta">TRANSMITTED IN PAL &middot; 625 LINES &middot; 25 FPS &middot; FROM THE HOME LAB, IRELAND</p>
+        </footer>
+
     </main>
-
-    <footer>
-        <p>All this was designed and written by AI <span class="footer-sep">—</span> <span class="footer-quip">it&rsquo;s getting better at it.</span></p>
-    </footer>
 
     <script>
     (function () {
         var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        /* Scroll reveal */
-        var revealEls = document.querySelectorAll('.reveal');
-        if (!reduceMotion && 'IntersectionObserver' in window) {
-            var io = new IntersectionObserver(function (entries) {
-                entries.forEach(function (e) {
-                    if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
-                });
-            }, { threshold: 0.15 });
-            revealEls.forEach(function (el) { io.observe(el); });
-        } else {
-            revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-        }
-
-        /* Cursor spotlight */
-        var spot = document.getElementById('spotlight');
-        if (spot && !reduceMotion && window.matchMedia('(pointer: fine)').matches) {
-            window.addEventListener('pointermove', function (e) {
-                spot.style.transform = 'translate(' + (e.clientX - 300) + 'px,' + (e.clientY - 300) + 'px)';
-                spot.style.opacity = '1';
-            }, { passive: true });
-        }
-
-        /* Terminal typing */
-        var lines = [
-            { cmd: 'whoami', out: ['justin.hourigan'] },
-            { cmd: 'cat career.log | tail -3', out: [
-                '1990s  television — graphics &amp; animation',
-                '2000s  video streaming — buffering as a rite of passage',
-                'now    cloud architecture — pixels at planet scale'
-            ]},
-            { cmd: 'uptime', out: ['30+ years in moving pictures, still shipping'] }
-        ];
-        var body = document.getElementById('terminal-body');
-        if (!body) return;
-
-        function renderInstant() {
-            var html = '';
-            lines.forEach(function (l) {
-                html += '<p class="t-line"><span class="t-prompt">justin@homelab:~$</span> ' + l.cmd + '</p>';
-                l.out.forEach(function (o) { html += '<p class="t-line t-out">' + o + '</p>'; });
-            });
-            html += '<p class="t-line"><span class="t-prompt">justin@homelab:~$</span> <span class="t-caret"></span></p>';
-            body.innerHTML = html;
-        }
-
-        if (reduceMotion) { renderInstant(); return; }
-
-        var started = false;
-        function typeSequence() {
-            if (started) return;
-            started = true;
-            var li = 0;
-            function nextLine() {
-                if (li >= lines.length) {
-                    var p = document.createElement('p');
-                    p.className = 't-line';
-                    p.innerHTML = '<span class="t-prompt">justin@homelab:~$</span> <span class="t-caret"></span>';
-                    body.appendChild(p);
-                    return;
-                }
-                var line = lines[li++];
-                var p = document.createElement('p');
-                p.className = 't-line';
-                p.innerHTML = '<span class="t-prompt">justin@homelab:~$</span> <span class="t-cmd"></span><span class="t-caret"></span>';
-                body.appendChild(p);
-                var cmdSpan = p.querySelector('.t-cmd');
-                var caret = p.querySelector('.t-caret');
-                var ci = 0;
-                var tick = setInterval(function () {
-                    cmdSpan.textContent = line.cmd.slice(0, ++ci);
-                    if (ci >= line.cmd.length) {
-                        clearInterval(tick);
-                        caret.remove();
-                        setTimeout(function () {
-                            line.out.forEach(function (o, i) {
-                                setTimeout(function () {
-                                    var op = document.createElement('p');
-                                    op.className = 't-line t-out';
-                                    op.innerHTML = o;
-                                    body.appendChild(op);
-                                    if (i === line.out.length - 1) setTimeout(nextLine, 350);
-                                }, i * 140);
-                            });
-                        }, 250);
-                    }
-                }, 45);
+        /* ---------- channels ---------- */
+        var channels = {
+            1: {
+                osd: 'CH 01',
+                html: '<h2>BROADCAST <span class="ch-era">EST. 1990s</span></h2>' +
+                      '<p>Television graphics and animation, 1990s issue. Flashy transitions, ' +
+                      'hot phosphor — the kind of motion graphics that made dial-up modems sweat.</p>'
+            },
+            2: {
+                osd: 'CH 02',
+                html: '<h2>STREAMING <span class="ch-era">THE WILD WEB</span></h2>' +
+                      '<p>Then the internet came knocking. Video over the wild early web — ' +
+                      'when buffering was a rite of passage and every pixel fought for bandwidth.</p>' +
+                      '<div class="buffer"><div class="buffer-fill"></div></div>' +
+                      '<p class="buffer-label">BUFFERING&hellip; 87%</p>'
+            },
+            3: {
+                osd: 'CH 03',
+                html: '<h2>CLOUD <span class="ch-era">NOW SHOWING</span></h2>' +
+                      '<p>Tonight&rsquo;s programme: cloud architecture. Invisible machines moving ' +
+                      'pictures at planet scale — smoother than a cat meme on fiber. ' +
+                      'After hours, the home lab hums.</p>'
             }
-            nextLine();
+        };
+
+        var current = 3;
+        var panel = document.getElementById('channel-panel');
+        var osd = document.getElementById('ch-osd');
+        var noise = document.getElementById('noise');
+        var autoTimer = null;
+
+        function render(ch) {
+            panel.innerHTML = channels[ch].html;
+            osd.textContent = channels[ch].osd;
+            document.body.setAttribute('data-channel', ch);
+            document.querySelectorAll('.pip-btn').forEach(function (b) {
+                b.classList.toggle('active', +b.getAttribute('data-ch') === ch);
+            });
         }
 
-        if ('IntersectionObserver' in window) {
-            var tio = new IntersectionObserver(function (entries) {
-                if (entries[0].isIntersecting) { typeSequence(); tio.disconnect(); }
-            }, { threshold: 0.4 });
-            tio.observe(document.getElementById('terminal'));
-        } else {
-            typeSequence();
+        function setChannel(ch, manual) {
+            if (ch === current) return;
+            current = ch;
+            if (reduceMotion) { render(ch); }
+            else {
+                document.body.classList.add('switching');
+                noise.style.opacity = '0.5';
+                setTimeout(function () {
+                    render(ch);
+                    osd.classList.add('flash');
+                    setTimeout(function () { osd.classList.remove('flash'); }, 900);
+                }, 140);
+                setTimeout(function () {
+                    document.body.classList.remove('switching');
+                    noise.style.opacity = '';
+                }, 340);
+            }
+            if (manual) armAutoCycle();
+        }
+
+        function next(dir) {
+            var ch = current + dir;
+            if (ch > 3) ch = 1;
+            if (ch < 1) ch = 3;
+            setChannel(ch, true);
+        }
+
+        function armAutoCycle() {
+            if (reduceMotion) return;
+            clearInterval(autoTimer);
+            autoTimer = setInterval(function () { next(1); }, 8000);
+        }
+
+        render(current);
+        armAutoCycle();
+
+        document.getElementById('ch-up').addEventListener('click', function () { next(1); });
+        document.getElementById('ch-down').addEventListener('click', function () { next(-1); });
+        document.querySelectorAll('.pip-btn').forEach(function (b) {
+            b.addEventListener('click', function () { setChannel(+b.getAttribute('data-ch'), true); });
+        });
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowUp' || e.key === 'ArrowRight') next(1);
+            if (e.key === 'ArrowDown' || e.key === 'ArrowLeft') next(-1);
+            if (e.key === '1' || e.key === '2' || e.key === '3') setChannel(+e.key, true);
+        });
+
+        /* ---------- timecode (PAL, 25fps) ---------- */
+        var tc = document.getElementById('timecode');
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+        function tickTC() {
+            var d = new Date();
+            var f = Math.floor(d.getMilliseconds() / 40);
+            tc.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' +
+                             pad(d.getSeconds()) + ':' + pad(f);
+        }
+        tickTC();
+        setInterval(tickTC, reduceMotion ? 1000 : 40);
+
+        /* ---------- static noise ---------- */
+        var ctx = noise.getContext('2d', { alpha: false });
+        var idata = null, buf32 = null;
+
+        function sizeNoise() {
+            noise.width = Math.max(1, Math.floor(window.innerWidth / 3));
+            noise.height = Math.max(1, Math.floor(window.innerHeight / 3));
+            idata = ctx.createImageData(noise.width, noise.height);
+            buf32 = new Uint32Array(idata.data.buffer);
+        }
+
+        function drawNoise() {
+            for (var i = 0; i < buf32.length; i++) {
+                var v = (Math.random() * 255) | 0;
+                buf32[i] = (255 << 24) | (v << 16) | (v << 8) | v;
+            }
+            ctx.putImageData(idata, 0, 0);
+        }
+
+        sizeNoise();
+        drawNoise();
+        window.addEventListener('resize', function () { sizeNoise(); drawNoise(); });
+
+        if (!reduceMotion) {
+            var last = 0;
+            (function loop(t) {
+                requestAnimationFrame(loop);
+                if (t - last > 66) { last = t; drawNoise(); }
+            })(0);
         }
     })();
     </script>
